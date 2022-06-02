@@ -259,3 +259,20 @@ h3 {
 		listCounter
 	);
 }
+
+@media screen and (max-width: 1023px) {
+	.list-right {
+		display: none;
+	}
+
+	.footer-list {
+		flex-wrap: wrap;
+	}
+}
+
+@media screen and (max-width: 768px) {
+
+	.footer-item {
+		flex-grow: 0;
+	}
+}
