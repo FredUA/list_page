@@ -61,7 +61,6 @@ class App {
 			} else {
 				this.focusArray[i].addEventListener('click', (e) => {
 					e.preventDefault();
-					console.log(e.currentTarget);
 					if (e.currentTarget.classList.contains('focused')) {
 						const link = this.currentItem.querySelector('.table-body_link').href;
 						window.open(link, '_blank');
