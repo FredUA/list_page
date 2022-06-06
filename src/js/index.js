@@ -44,11 +44,6 @@ class App {
 	}
 
 	initEvents() {
-		const isMobile = (a) => {
-
-		}
-
-
 		for (let i = 0; i < this.focusArray.length; i++) {
 			if (!!this.focusArray[i].dataset.autofocus) {
 				this.navigate(i, true);
@@ -56,7 +51,7 @@ class App {
 				this.navigate(i, true);
 			}
 
-			if (!isMobile) {
+			if (!this.isMobile) {
 				this.focusArray[i].addEventListener('click', (e) => {
 					e.preventDefault();
 				})
@@ -83,7 +78,7 @@ class App {
 			e.preventDefault();
 		})
 
-		if (!isMobile) {
+		if (!this.isMobile) {
 			document.body.addEventListener('keydown', (e) => {
 				if (e.key === 'ArrowDown') {
 					const initialElementIndex = parseInt(this.currentItem.dataset.focus);
